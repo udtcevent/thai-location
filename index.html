@@ -28,7 +28,9 @@
     <table class="table table-striped" style="margin-top: -17px;">
         <thead>
             <tr>
-                <th colspan="3" style="width: 30%"><center><strong>กรุณาเลือกจังหวัด, อำเภอ, ตำบล ที่ต้องการค้นหาหมู่บ้าน</strong></center></th>
+                <th colspan="3" style="width: 30%">
+                    <center><strong>กรุณาเลือกจังหวัด, อำเภอ, ตำบล ที่ต้องการค้นหาหมู่บ้าน</strong></center>
+                </th>
             </tr>
             <tr>
                 <th style="width: 30%"><select class="form-select" style="width:100%;" id="province"></select></th>
@@ -37,8 +39,18 @@
             </tr>
         </thead>
     </table>
-    <div id="resultView" style="text-align: center; font-size:20px;">กรุณากรอกข้อมูลก่อนทำการค้นหาที่ตั้ง หรือเลือกจากรายการด้านบน</div>
 
+    <div id="resultView" style="text-align: center; font-size:20px;">กรุณากรอกข้อมูลก่อนทำการค้นหาที่ตั้ง หรือเลือกจากรายการด้านบน</div>
+    
+    <footer style="text-align: center; font-size:20px; position: fixed;  left: 0;  bottom: 0;  width: 100%;">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th style="width:100%;"><button type="button" id="btnSearch" class="btn btn-success btn-lg" style="width: 100%"><i class="fa fa-sign-in"></i>  เข้าสู่ระบบ (สำหรับเจ้าหน้าที่)</button></th>
+                </tr>
+            </thead>
+        </table>
+    </footer>
     <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
@@ -67,8 +79,12 @@
 
         const db = getDatabase();
 
+        let keywordSearch = document.getElementById('keywordSearch');
+        let btnSearch = document.getElementById('btnSearch');
+        let province = document.getElementById('province');
+        let amphure = document.getElementById('amphure');
         let serchView = document.getElementById('serchView');
-        let resultView = document.getElementById('resultView');
+        let tambon = document.getElementById('tambon');
     </script>
 </body>
 
