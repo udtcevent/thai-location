@@ -46,7 +46,7 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th style="width:100%;"><button type="button" id="btnSearch" class="btn btn-success btn-lg" style="width: 100%"><i class="fa fa-sign-in"></i>  เข้าสู่ระบบ (สำหรับเจ้าหน้าที่)</button></th>
+                    <th style="width:100%;"><button type="button" id="btnSignIn" class="btn btn-success btn-lg" style="width: 100%"><i class="fa fa-sign-in"></i>  เข้าสู่ระบบ (สำหรับเจ้าหน้าที่)</button></th>
                 </tr>
             </thead>
         </table>
@@ -85,6 +85,9 @@
         let amphure = document.getElementById('amphure');
         let serchView = document.getElementById('serchView');
         let tambon = document.getElementById('tambon');
+        let btnSignIn = document.getElementById('btnSignIn');
+
+        btnSignIn.addEventListener(('click'),  () => { window.location.replace('signin.html'); });
     </script>
 </body>
 
